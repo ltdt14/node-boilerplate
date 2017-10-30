@@ -2,8 +2,6 @@
 
 This boilerplate uses:
 
-- [Flow](https://github.com/facebook/flow) to add static types
-- [Babel](https://babeljs.io/) to compile flow types
 - [Grunt](https://gruntjs.com/) task runner
 - Linting with [ESLint](https://eslint.org/) with [Airbnb Styleguide](hhttps://github.com/airbnb/javascript) which ignores formatting with [Prettier](https://github.com/prettier/prettier/)
 - [JSDoc](http://usejsdoc.org) which can be compiled to Markdown
