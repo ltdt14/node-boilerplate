@@ -9,10 +9,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha",
-    "build": "babel src/ -d dist/",
-    "flow": "node_modules/.bin/flow",
-    "prepublish": "yarn run build",
-    "production": "npm run flow && npm run build && grunt eslint && npm test && grunt jsdoc2md && grunt markdown_toc"
+    "production": "grunt eslint && npm test && grunt jsdoc2md && grunt markdown_toc"
   },
   "repository": {
     "type": "git",
@@ -28,16 +25,12 @@
     "dotenv": "^4.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-flow": "^6.23.0",
     "chai": "^4.1.1",
     "eslint": "^4.5.0",
     "eslint-config-airbnb-base": "^11.3.2",
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-import": "^2.7.0",
-    "flow-bin": "^0.53.0",
     "grunt": "^1.0.1",
-    "grunt-babel": "^7.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-eslint": "^20.0.0",
     "grunt-jsdoc-to-markdown": "^3.0.0",

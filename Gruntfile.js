@@ -6,7 +6,6 @@ module.exports = function(grunt) {
     //load plugins
     [
         'grunt-contrib-watch',
-        'grunt-babel',
         'grunt-jsdoc-to-markdown',
         'grunt-markdown-toc',
         'grunt-eslint'
@@ -18,26 +17,14 @@ module.exports = function(grunt) {
     grunt.initConfig({
         jsdoc2md: {
             oneOutputFile: {
-                src: 'dist/index.js',
+                src: 'index.js',
                 dest: 'docs/API.md'
-            }
-        },
-        babel: {
-            dist: {
-                files: {
-                    "dist/index.js": "src/index.js",
-                    "dist/lib/doSomething.js": "src/lib/doSomething.js"
-                }
             }
         },
         markdown_toc: {
             src: ['./**.md', './docs/**.md']
         },
         watch: {
-            babel: {
-                files: ['src/**/*.js'],
-                tasks: ['babel']
-            },
             toc: {
                 files: ["**/*"],
                 tasks: ["toc"],
@@ -47,7 +34,7 @@ module.exports = function(grunt) {
             }
         },
         eslint: {
-            target: ['dist/**/*.js']
+            target: ['lib/**/*.js', 'index.js']
         }
     });
 };

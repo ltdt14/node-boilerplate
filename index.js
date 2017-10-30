@@ -1,11 +1,9 @@
-// @flow
-
 const dotenv = require('dotenv');
 const path = require('path');
 const fs = require('fs');
 
 // load env vars if .env exists
-if (fs.existsSync(path.join(__dirname, '../.env'))) {
+if (fs.existsSync(path.join(__dirname, './.env'))) {
     dotenv.load();
 } else {
     throw new ReferenceError('You need an .env file!');
@@ -31,6 +29,6 @@ const doSomething = require('./lib/doSomething');
  *      name ? console.log(name) : console.log(err)
  * }
  */
-exports.do = function(name: string, callback: Function) {
+exports.do = function(name, callback) {
     doSomething.do(name, callback);
 };

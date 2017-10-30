@@ -4,8 +4,8 @@ const chai = require('chai');
 const expect = require('chai').expect;
 
 
-const doSomething = require('../dist/lib/doSomething');
-const api = require('../dist/index');
+const doSomething = require('../lib/doSomething');
+const api = require('../index');
 
 describe('doSomething', function() {
     describe('do', function() {
